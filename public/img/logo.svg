@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" preserveAspectRatio="xMidYMid meet" viewBox="592.322 428.184 111.626 35.943" xmlns="http://www.w3.org/2000/svg">
+  <g data-item-type="text" data-item="Business" id="logo__item--business" class="logo__item" style="" transform="matrix(0.723825, 0, 0, 0.797818, 163.518906, -4.602237)">
+    <g class="logo__item__inner" transform="translate(595.1875 576.8298446616004) scale(1 1) rotate(0 0 0)">
+      <text data-part-id="logo__item--business" dy="0" dominant-baseline="auto" alignment-baseline="auto" font-family="Droid Serif" font-size="32px" fill="#1B75BB" letter-spacing="0" font-weight="normal" font-style="normal" data-font-family="Droid Serif" data-font-weight="normal" data-font-style="normal" data-ttf-url="/builder_assets/fontsttf/font-montserrat-bold-normal.ttf" data-font-filename="droid-serif-normal-normal" style="white-space: pre;">Alplast</text>
+    </g>
+  </g>
+  <g data-item-type="image" data-item="Image" data-logo-item="" id="logo__item--logo_0" class="logo__item" style="" transform="matrix(0.330716, 0, 0, 0.238384, 466.811646, 332.960968)">
+    <g class="logo__item__inner" transform="translate(572.2900080348431 404.5) scale(1.4948799972323796 1.4948799972323796) rotate(0 0 0)">
+      <g>
+        <polygon fill="#1B75BB" points="59.04,39.434 70.164,33.214 84.051,38.535 84.051,73.501 69.891,78.821 58.761,72.396    59.243,71.914 69.818,74.745 69.748,37.017 59.105,40.055  " data-part-id="logo__item--logo_0__0"/>
+        <polygon fill="#26A9E0" points="23.081,19.865 42.664,8.917 67.11,18.284 67.11,79.825 42.176,89.191 22.593,77.879 23.448,77.029    42.056,82.018 41.935,15.609 23.201,20.958  " data-part-id="logo__item--logo_0__1"/>
+        <g>
+          <polygon fill="#FFFFFF" points="77.494,47.862 74.758,47.741 74.758,43.575 77.494,44.106" data-part-id="logo__item--logo_0__2"/>
+          <polygon fill="#FFFFFF" points="80.701,48.002 77.965,47.884 77.965,44.194 80.701,44.726" data-part-id="logo__item--logo_0__3"/>
+          <polygon fill="#FFFFFF" points="77.494,52.654 74.758,53.063 74.758,48.893 77.494,48.901" data-part-id="logo__item--logo_0__4"/>
+          <polygon fill="#FFFFFF" points="80.701,52.183 77.965,52.588 77.965,48.901 80.701,48.906" data-part-id="logo__item--logo_0__5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

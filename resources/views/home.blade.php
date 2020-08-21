@@ -14,7 +14,8 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="" />
+                                    <!-- <img src="img/logo.svg" alt="" /> -->
+                                    <img src="img/logo.svg" width="140px" height="40px" />
                                 </a>
                             </div>
                         </div>
