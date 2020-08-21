@@ -17,4 +17,4 @@ jobs:
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
         with:
-          args: --script 'cd {PATH}' --script 'git checkout -f' --script 'git pull' --script 'composer update' --script 'npm run prod' --script 'php artisan migrate --force'
+          args: --script 'cd /var/www/alplast/' --script 'git checkout -f' --script 'git pull' --script 'composer update' --script 'npm run prod' --script 'php artisan migrate --force'
