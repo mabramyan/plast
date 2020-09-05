@@ -147,7 +147,7 @@ class Page extends Model
                 $this->$attribute_name = $attr->image;
                 $this->attributes['extras'] = json_encode($attr);
                 $this->original['extras'] = json_encode($attr);
-
+ 
                 
             }
             
