@@ -31,5 +31,8 @@ Route::group(['prefix' => '{locale}','where' => ['locale' => '[a-zA-Z]{2}'],
     Route::get('/home', function () {
         return view('home');
     });
+    Route::get('{page}/{subs?}', ['uses' => '\App\Http\Controllers\PageController@index'])
+    ->where(['page' => '^(((?=(?!admin))(?=(?!\/)).))*$', 'subs' => '.*']);
+
 });
 

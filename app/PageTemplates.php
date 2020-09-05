@@ -23,49 +23,62 @@ trait PageTemplates
     private function services()
     {
         $this->crud->addField([   // CustomHTML
-                        'name' => 'metas_separator',
-                        'type' => 'custom_html',
-                        'value' => '<br><h2>'.trans('backpack::pagemanager.metas').'</h2><hr>',
-                    ]);
+            'name' => 'metas_separator',
+            'type' => 'custom_html',
+            'value' => '<br><h2>' . trans('backpack::pagemanager.metas') . '</h2><hr>',
+        ]);
         $this->crud->addField([
-                        'name' => 'meta_title',
-                        'label' => trans('backpack::pagemanager.meta_title'),
-                        'fake' => true,
-                        'store_in' => 'extras',
-                    ]);
+            'name' => 'meta_title',
+            'label' => trans('backpack::pagemanager.meta_title'),
+            'fake' => true,
+            'store_in' => 'extras',
+        ]);
         $this->crud->addField([
-                        'name' => 'meta_description',
-                        'label' => trans('backpack::pagemanager.meta_description'),
-                        'fake' => true,
-                        'store_in' => 'extras',
-                    ]);
+            'name' => 'meta_description',
+            'label' => trans('backpack::pagemanager.meta_description'),
+            'fake' => true,
+            'store_in' => 'extras',
+        ]);
         $this->crud->addField([
-                        'name' => 'meta_keywords',
-                        'type' => 'textarea',
-                        'label' => trans('backpack::pagemanager.meta_keywords'),
-                        'fake' => true,
-                        'store_in' => 'extras',
-                    ]);
+            'name' => 'meta_keywords',
+            'type' => 'textarea',
+            'label' => trans('backpack::pagemanager.meta_keywords'),
+            'fake' => true,
+            'store_in' => 'extras',
+        ]);
+        $this->crud->addField([ // image
+            'label' => "Profile Image",
+            'name' => "image",
+            'type' => 'image',
+            'upload' => true,
+            'crop' => true, // set to true to allow cropping, false to disable
+            'aspect_ratio' => 0, // ommit or set to 0 to allow any aspect ratio
+            'fake' => true,
+            'store_in' => 'extras',
+            // 'disk' => 's3_bucket', // in case you need to show images from a different disk
+            'prefix' => '' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
+        ]);
         $this->crud->addField([   // CustomHTML
-                        'name' => 'content_separator',
-                        'type' => 'custom_html',
-                        'value' => '<br><h2>'.trans('backpack::pagemanager.content').'</h2><hr>',
-                    ]);
+            'name' => 'content_separator',
+            'type' => 'custom_html',
+            'value' => '<br><h2>' . trans('backpack::pagemanager.content') . '</h2><hr>',
+        ]);
         $this->crud->addField([
-                        'name' => 'content',
-                        'label' => trans('backpack::pagemanager.content'),
-                        'type' => 'wysiwyg',
-                        'placeholder' => trans('backpack::pagemanager.content_placeholder'),
-                    ]);
+            'name' => 'content',
+            'label' => trans('backpack::pagemanager.content'),
+            'type' => 'wysiwyg',
+            'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+        ]);
     }
 
     private function about_us()
     {
         $this->crud->addField([
-                        'name' => 'content',
-                        'label' => trans('backpack::pagemanager.content'),
-                        'type' => 'wysiwyg',
-                        'placeholder' => trans('backpack::pagemanager.content_placeholder'),
-                    ]);
+            'name' => 'content',
+            'label' => trans('backpack::pagemanager.content'),
+            'type' => 'wysiwyg',
+            'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+        ]);
     }
+    
 }

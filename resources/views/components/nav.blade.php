@@ -12,7 +12,7 @@
                             <div class="logo-img">
                                 <a href="index.html">
                                     <!-- <img src="img/logo.svg" alt="" /> -->
-                                    <img src="img/logo.svg" width="140px" height="40px" />
+                                    <img src="/img/logo.svg" width="140px" height="40px" />
                                 </a>
                             </div>
                         </div>
@@ -20,7 +20,15 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">home</a></li>
+                                        <li><a class="active" href="/">home</a></li>
+                                        @foreach (\App\MenuItem::getTree(); as $item)
+                                        <li>
+                                            <a class="no-underline hover:underline p-3"
+                                            href="{{$item->url()}}">
+                                            {{ $item->name }}
+                                            </a> 
+                                        </li>
+                                        @endforeach 
                                         <li><a href="about.html">სერვისები</a></li>
                                          <li><a href="project.html">Projects</a></li>
                                         <li><a href="service.html">Services</a></li>
