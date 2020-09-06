@@ -10,7 +10,7 @@ class MenuItem extends Model
     use CrudTrait;
 
     protected $table = 'menu_items';
-    protected $fillable = ['name', 'type', 'link', 'page_id', 'parent_id','locale'];
+    protected $fillable = ['name', 'type', 'link', 'page_id', 'parent_id', 'locale'];
 
     public function parent()
     {
@@ -31,9 +31,14 @@ class MenuItem extends Model
      * Get all menu items, in a hierarchical collection.
      * Only supports 2 levels of indentation.
      */
-    public static function getTree()
+    public static function getTree($locale = null)
     {
-        $menu = self::orderBy('lft')->get();
+        if ($locale) {
+            $menu = self::where('locale',$locale)->orderBy('lft')->get();
+        } else {
+            $menu = self::orderBy('lft')->get();
+        }
+
 
         if ($menu->count()) {
             foreach ($menu as $k => $menu_item) {
@@ -68,7 +73,7 @@ class MenuItem extends Model
 
             default: //page_link
                 if ($this->page) {
-                    return url(app()->getLocale().'/'.$this->page->slug);
+                    return url(app()->getLocale() . '/' . $this->page->slug);
                 }
                 break;
         }
