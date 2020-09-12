@@ -57,7 +57,7 @@ class ImageCrudController extends CrudController
             // optional width/height if 25px is not ok with you
             // 'height' => '30px',
             // 'width'  => '30px',
-        ],);
+        ]);
     }
 
     /**

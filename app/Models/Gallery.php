@@ -29,7 +29,7 @@ class Gallery extends Model
     // protected $hidden = [];
     // protected $dates = [];
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [
