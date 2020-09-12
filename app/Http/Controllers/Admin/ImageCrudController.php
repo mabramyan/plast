@@ -103,7 +103,7 @@ class ImageCrudController extends CrudController
             'options'   => (function ($query) {
                 return $query->orderBy('title', 'ASC')->get();
             }), //  you can use this to filter the results show in the select
-        ],);
+        ]);
 
         CRUD::addField([   // CKEditor
             'name'          => 'caption',
