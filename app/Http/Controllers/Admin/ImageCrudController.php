@@ -57,7 +57,7 @@ class ImageCrudController extends CrudController
             // optional width/height if 25px is not ok with you
             // 'height' => '30px',
             // 'width'  => '30px',
-        ],);
+        ]);
     }
 
     /**
@@ -103,7 +103,7 @@ class ImageCrudController extends CrudController
             'options'   => (function ($query) {
                 return $query->orderBy('title', 'ASC')->get();
             }), //  you can use this to filter the results show in the select
-        ],);
+        ]);
 
         CRUD::addField([   // CKEditor
             'name'          => 'caption',
