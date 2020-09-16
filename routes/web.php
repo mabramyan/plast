@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +24,15 @@ Route::get('/', function () {
 Route::group(['prefix' => '{locale}','where' => ['locale' => '[a-zA-Z]{2}'], 
 'middleware' => 'setlocale'], function() {
 
-    Route::get('/', function () {
-        return view('home');
-    });
+    Route::get('/', [Controller::class,'index'])->name('home');
+    // Route::get('/', function () {
+    //     return view('home');
+    // });
 
 
-    Route::get('/home', function () {
-        return view('home');
-    });
+    // Route::get('/home', function () {
+    //     return view('home');
+    // });
     Route::get('{page}/{subs?}', ['uses' => '\App\Http\Controllers\PageController@index'])
     ->where(['page' => '^(((?=(?!admin))(?=(?!\/)).))*$', 'subs' => '.*']);
 
