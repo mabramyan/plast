@@ -3,6 +3,7 @@
 namespace App\Http\View\Composers;
 
 use App\Repositories\UserRepository;
+use App\Models\Gallery;
 use Illuminate\View\View;
 
 class MainComposer
@@ -34,8 +35,10 @@ class MainComposer
     public function compose(View $view)
     {
 
+       $mainSliderId =  config('settings.main_slider');
+       $gallery = Gallery::where('id', $mainSliderId)->first();
+       
 
-
-        $view->with('counts', 100);
+        $view->with('mainSlider', $gallery);
     }
 }

@@ -57,6 +57,10 @@ class Gallery extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
+    public function images()
+    {
+        return $this->hasMany('App\Models\Image');
+    }
 
     /*
     |--------------------------------------------------------------------------

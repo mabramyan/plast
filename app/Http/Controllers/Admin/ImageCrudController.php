@@ -105,10 +105,18 @@ class ImageCrudController extends CrudController
             }), //  you can use this to filter the results show in the select
         ]);
 
+        CRUD::addField([
+            'name' => 'title',
+            'type' => 'text'
+        ]);
         CRUD::addField([   // CKEditor
             'name'          => 'caption',
             'label'         => 'Caption',
             'type'  => 'wysiwyg',
+        ]);
+        CRUD::addField([
+            'name' => 'link',
+            'type' => 'text'
         ]);
 
         CRUD::addField([   // select_from_array
