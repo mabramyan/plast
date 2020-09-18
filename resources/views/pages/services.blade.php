@@ -17,7 +17,7 @@
             <div class="col-xl-6 col-lg-6">
                 <div class="projects_details_info">
                     <div class="details_thumb">
-                        <img src="/img/project/details_info.png" alt="">
+                        <img src="/{{$page->image}}" alt="">
                     </div>
                     <div class="details_info">
                         <h3>Project info</h3>
