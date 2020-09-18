@@ -5,6 +5,7 @@
 <div class="slider_area">
 
     <div class="slider_active owl-carousel">
+        @if(!empty($mainSlider->images))
         @foreach ($mainSlider->images as $image)
         <div class="single_slider overlay2 d-flex align-items-center justify-content-center " style="background-image: url(/{{ ($image->src)}})">
             <div class="container">
@@ -23,6 +24,7 @@
             </div>
         </div>
         @endforeach
+        @endif
     </div>
 </div>
 <!-- slider_area_end -->
