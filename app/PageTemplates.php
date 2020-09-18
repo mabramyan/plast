@@ -46,6 +46,13 @@ trait PageTemplates
             'fake' => true,
             'store_in' => 'extras',
         ]);
+        $this->crud->addField([  // Select
+            'label'     => "Gallery",
+            'type'      => 'select_gallery',
+            'name'      => 'top_slider', // the db column for the foreign key
+
+            
+        ]);
         $this->crud->addField([ // image
             'label' => "Profile Image",
             'name' => "image",
@@ -78,6 +85,31 @@ trait PageTemplates
             'label' => trans('backpack::pagemanager.content'),
             'type' => 'wysiwyg',
             'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+        ]);
+        $this->crud->addField([ // image
+            'label' => "Main Image",
+            'name' => "image",
+            'type' => 'browse',
+            'upload' => true,
+            'crop' => true, // set to true to allow cropping, false to disable
+            'aspect_ratio' => 0, // ommit or set to 0 to allow any aspect ratio
+            'fake' => true,
+            'store_in' => 'extras',
+            // 'disk' => 's3_bucket', // in case you need to show images from a different disk
+            'prefix' => '' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
+        ]);
+        $this->crud->addField([  // Select
+            'label'     => "Gallery",
+            'type'      => 'select_gallery',
+            'name'      => 'top_slider', // the db column for the foreign key
+
+            
+        ]);
+         $this->crud->addField([   // URL
+            'name'            => 'video',
+            'label'           => 'Link to video file on YouTube or Vimeo',
+            'type'            => 'video',
+            'youtube_api_key' => 'AIzaSyDeLh2tYo5tPTetToXphZMGa5GwdAL5z4s',
         ]);
     }
     
