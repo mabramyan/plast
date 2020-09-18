@@ -25,13 +25,13 @@ class Page extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['template', 'name', 'title', 'slug', 'content', 'extras', 'video'];
+    protected $fillable = ['template', 'name', 'title', 'slug', 'content', 'extras', 'video','mission_title','mission','mission_image','top_banner'];
     // protected $hidden = [];
     // protected $dates = [];
     protected $fakeColumns = ['extras'];
     protected $casts = [
         'extras' => 'array',
-        'video' => 'array',
+        'video' => 'object',
     ];
 
     /**
@@ -87,6 +87,9 @@ class Page extends Model
     | ACCESORS
     |--------------------------------------------------------------------------
     */
+
+    
+
     public function getImageAttribute()
     {
         if($attr = json_decode($this->attributes['extras']))

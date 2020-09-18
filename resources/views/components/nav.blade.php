@@ -10,7 +10,7 @@
                  <div class="row align-items-center justify-content-between no-gutters">
                      <div class="col-xl-2 col-lg-2">
                          <div class="logo-img">
-                             <a href="index.html">
+                             <a href="/">
                                  <!-- <img src="img/logo.svg" alt="" /> -->
                                  <img src="/img/logo.svg" width="140px" height="40px" />
                              </a>

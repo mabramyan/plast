@@ -86,6 +86,13 @@ trait PageTemplates
             'type' => 'wysiwyg',
             'placeholder' => trans('backpack::pagemanager.content_placeholder'),
         ]);
+
+        $this->crud->addField([ // image
+            'label' => "Top banner",
+            'name' => "top_banner",
+            'type' => 'browse',
+           ]);
+
         $this->crud->addField([ // image
             'label' => "Main Image",
             'name' => "image",
@@ -110,6 +117,33 @@ trait PageTemplates
             'label'           => 'Link to video file on YouTube or Vimeo',
             'type'            => 'video',
             'youtube_api_key' => 'AIzaSyDeLh2tYo5tPTetToXphZMGa5GwdAL5z4s',
+        ]);
+
+        $this->crud->addField([  // Select
+            'label'     => "Mission",
+            'type'      => 'text',
+            'name'      => 'mission_title', // the db column for the foreign key
+
+            
+        ]);
+
+        $this->crud->addField([
+            'name' => 'mission',
+            'label' => 'Mission content',
+            'type' => 'wysiwyg',
+            'placeholder' => 'Mission content',
+        ]);
+        $this->crud->addField([ // image
+            'label' => "Mission Image",
+            'name' => "mission_image",
+            'type' => 'browse',
+            'upload' => true,
+            'crop' => true, // set to true to allow cropping, false to disable
+            'aspect_ratio' => 0, // ommit or set to 0 to allow any aspect ratio
+            'fake' => true,
+            'store_in' => 'extras',
+            // 'disk' => 's3_bucket', // in case you need to show images from a different disk
+            'prefix' => '' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
         ]);
     }
     
