@@ -27,16 +27,10 @@
                 <div class="about_info">
                     <div class="section_title">
                         <span class="sub_heading">{{__('common.about_us')}}</span>
-                        <h3>Architechtural plan <br>
-                            design and build</h3>
+                        <h3>{{ $page->heading}}</h3>
                         <div class="seperator"></div>
                     </div>
                     {!! $page->content !!}
-                    <ul class="about_list">
-                        <li>Consectetur adipiscing sed do eiusmod. </li>
-                        <li>Eiusmod tempor incididunt labore. </li>
-                    </ul>
-                    <a href="#" class="boxed-btn">{{__('common.services')}}</a>
                 </div>
             </div>
         </div>
@@ -53,9 +47,6 @@
                     <h3>{{ $page->mission_title}}</h3>
                     <div class="seperator"></div>
                     {!! $page->mission !!}
-                    <div class="mission_contact">
-                        <a href="#" class="boxed-btn large-width">{{__('common.contact_us')}}</a>
-                    </div>
                 </div>
             </div>
             <div class="col-xl-5 offset-xl-1 col-md-6">

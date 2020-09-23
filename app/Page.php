@@ -25,7 +25,7 @@ class Page extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['template', 'name', 'title', 'slug', 'content', 'extras', 'video','mission_title','mission','mission_image','top_banner'];
+    protected $fillable = ['template', 'name', 'title', 'slug', 'content', 'extras', 'video','mission_title','mission','mission_image','top_banner','heading'];
     // protected $hidden = [];
     // protected $dates = [];
     protected $fakeColumns = ['extras'];

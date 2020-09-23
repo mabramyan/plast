@@ -80,11 +80,20 @@ trait PageTemplates
 
     private function about_us()
     {
+        $this->crud->addField([  // Select
+            'label'     => "Heading",
+            'type'      => 'text',
+            'name'      => 'heading', // the db column for the foreign key
+
+            
+        ]);
+
         $this->crud->addField([
             'name' => 'content',
             'label' => trans('backpack::pagemanager.content'),
             'type' => 'wysiwyg',
             'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+            'options' => ['allowedContent' => true],
         ]);
 
         $this->crud->addField([ // image
@@ -132,6 +141,8 @@ trait PageTemplates
             'label' => 'Mission content',
             'type' => 'wysiwyg',
             'placeholder' => 'Mission content',
+            'options' => ['allowedContent' => true],
+
         ]);
         $this->crud->addField([ // image
             'label' => "Mission Image",
